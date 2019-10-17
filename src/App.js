@@ -18,7 +18,7 @@ class App extends Component {
     clicked: [],
     gameOver: false,
     message: "",
-    winner: ""
+    winner: "Click on an image to earn points, but don't click on any more than once!"
   };
 
   shuffleArray = array => {
