@@ -10,8 +10,6 @@ function Wrapper(props) {
             </div>
         </div>
     )
-
-
 }
 
 export default Wrapper;
