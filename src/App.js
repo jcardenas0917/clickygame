@@ -39,13 +39,14 @@ class App extends Component {
     return array;
   }
   clickHero = (id) => {
-    console.log(`Picture clicked with id: ${id}`);
+    this.setState({
+      winner: "Click on an image to earn points, but don't click on any more than once!"
+    })
     if (this.state.clicked.includes(id)) {
       this.resetGame();
     } else {
       this.state.clicked.push(id);
       this.increaseScore();
-      console.log(this.state.clicked);
       this.setState({
         gameOver: false,
         message: "Correct!"
@@ -55,7 +56,6 @@ class App extends Component {
   }
   increaseScore = () => {
     let score = this.state.score + 1
-    console.log(`current score  ${score}`);
     if (score === Object.keys(this.state.heroes).length) {
       this.setState({
         heroes,
