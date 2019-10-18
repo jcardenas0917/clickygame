@@ -9,7 +9,7 @@ import Title from "./components/Title";
 import Footer from "./components/Footer"
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Setting the app state
   state = {
     heroes,
     score: 0,
@@ -18,7 +18,7 @@ class App extends Component {
     message: "",
     winner: "Click on an image to earn points, but don't click on any more than once!"
   };
-
+  //shuffle algorith to suffle array
   shuffleArray = array => {
     let currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -37,6 +37,7 @@ class App extends Component {
 
     return array;
   }
+  //Method to check if the click matches the id of the image
   clickHero = (id) => {
     this.setState({
       winner: "Click on an image to earn points, but don't click on any more than once!"
@@ -52,6 +53,8 @@ class App extends Component {
       this.shuffleHeroes();
     }
   }
+  //method to increase the score and top score
+  //this method also sets the state based on the score
   increaseScore = () => {
     let score = this.state.score + 1
     if (score === Object.keys(this.state.heroes).length) {
@@ -74,6 +77,7 @@ class App extends Component {
       })
     }
   }
+  //Method to reset the game
   resetGame = () => {
     this.setState({
       heroes,
@@ -84,12 +88,14 @@ class App extends Component {
     })
     this.shuffleHeroes();
   }
+  //method that calls the shuffle algorith and also assigns the new state for heroes
   shuffleHeroes = () => {
     let newHeroArray = this.shuffleArray(heroes);
     this.setState({ heroes: newHeroArray });
   }
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over this.state.heroes
+  // bring componentes together and pass the information using props
   render() {
     return (
       <div>
