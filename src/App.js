@@ -111,10 +111,8 @@ class App extends Component {
           {this.state.heroes.map(hero => (
             <Characters
               clickHero={this.clickHero}
-              id={hero.id}
               key={hero.id}
-              name={hero.name}
-              image={hero.image}
+              hero={hero}
             />
           ))}
         </Wrapper>
