@@ -1,11 +1,11 @@
 .wrapper {
-  padding-top: 50px;
-  background: white;
-  height: 100%;
   display: flex;
-  flex-flow: row wrap;
-  padding: 20px;
-  justify-content: space-around;
-  align-content: flex-start;
-  overflow: auto;
+  min-height: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  width: 90%;
+  margin: 0 auto;
 }

@@ -2,11 +2,36 @@
   cursor: pointer;
 }
 
-.img-container {
+.icons:hover {
+  transform: scale(1.2);
+}
+
+.icons {
   background-size: cover;
   background-position: 50%;
-  padding-bottom: 30px;
+  height: 170px;
+  width: 170px;
+  margin: 8px 25px;
+  border: 5px solid #f1f1f1;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
 }
-.img-container:hover {
-  transform: scale(1.2);
+
+@media only screen and (max-width: 1650px) {
+  .icons {
+    background-size: cover;
+    background-position: 50%;
+    height: 120px;
+    width: 120px;
+    margin: 6px 15px;
+    border: 5px solid #f1f1f1;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+      0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+  }
 }

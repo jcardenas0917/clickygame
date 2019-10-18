@@ -15,7 +15,6 @@ class App extends Component {
     score: 0,
     topScore: 0,
     clicked: [],
-    gameOver: false,
     message: "",
     winner: "Click on an image to earn points, but don't click on any more than once!"
   };
@@ -48,7 +47,6 @@ class App extends Component {
       this.state.clicked.push(id);
       this.increaseScore();
       this.setState({
-        gameOver: false,
         message: "Correct!"
       });
       this.shuffleHeroes();
@@ -62,7 +60,6 @@ class App extends Component {
         topScore: score,
         score: 0,
         clicked: [],
-        gameOver: false,
         winner: "You WIN!!!"
       })
     } else if (score > this.state.topScore) {
@@ -83,7 +80,6 @@ class App extends Component {
       score: 0,
       topScore: this.state.topScore,
       clicked: [],
-      gameOver: true,
       message: "Sorry you loss!"
     })
     this.shuffleHeroes();
