@@ -1,5 +1,6 @@
 .footer {
   text-align: center;
+  background-image: linear-gradient(to right, red, blue);
 }
 
 p {

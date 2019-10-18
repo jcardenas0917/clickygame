@@ -3,3 +3,7 @@
   text-align: center;
   min-height: 5vh;
 }
+
+.navbar {
+  background-image: linear-gradient(to right, red, blue);
+}
