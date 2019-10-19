@@ -18,6 +18,9 @@ class App extends Component {
     message: "",
     winner: "Click on an image to earn points, but don't click on any more than once!"
   };
+  componentDidMount() {
+    this.setState({ message: "Click a hero to get started" })
+  }
   //shuffle algorith to suffle array
   shuffleArray = array => {
     let currentIndex = array.length, temporaryValue, randomIndex;
@@ -69,7 +72,6 @@ class App extends Component {
       this.setState({
         topScore: score,
         score: score,
-        message: "New High Score Set"
       })
     } else {
       this.setState({
